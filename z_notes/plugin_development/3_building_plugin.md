@@ -14,3 +14,29 @@ top-level menu
 sub-level menu
 - add to existing top-level menu
 - best for plugins with one settings page
+
+==
+
+parent slugs for add_submenu_page()
+
+- slug determines which menu to add the submenu to
+
+Dashboard menu - index.php
+
+posts - edit.php
+
+pages - edit.php?post_type=page
+
+media - upload.php
+
+comments - edit-comments.php
+
+themes - themes.php
+
+plugins - plugins.php
+
+users - users.php
+
+tools - tools.php
+
+setting - options-general.php
