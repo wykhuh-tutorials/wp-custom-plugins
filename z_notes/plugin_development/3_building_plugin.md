@@ -40,3 +40,10 @@ users - users.php
 tools - tools.php
 
 setting - options-general.php
+
+==
+
+allowed html fields
+
+text input, radio, checkbox, textarea, select menu
+

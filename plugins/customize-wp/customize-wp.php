@@ -23,3 +23,36 @@ if ( is_admin())  {
   require_once plugin_dir_path(__FILE__) . 'admin/admin-menu.php';
   require_once plugin_dir_path(__FILE__) . 'admin/settings-page.php';
 }
+
+// register plugin settings
+function custom_wp_register_settings() {
+
+	/*
+
+	register_setting(
+		string   $option_group, // same as "settings_fields( 'xxx' )
+		string   $option_name, // field name in database
+		callable $sanitize_callback
+	);
+
+	*/
+
+	register_setting(
+		'customize_wp_options',
+		'customize_wp_options',
+		'custom_wp_callback_validate_options'
+	);
+
+}
+add_action( 'admin_init', 'custom_wp_register_settings' );
+
+
+// validate plugin settings
+function custom_wp_callback_validate_options($input) {
+
+	// todo: add validation functionality..
+
+	return $input;
+
+}
+
