@@ -5,12 +5,6 @@
   exit;
 }
 
-// validate plugin settings
-function custom_wp_callback_validate_options($input) {
-	// todo: add validation functionality..
-	return $input;
-}
-
 // callback: login section
 function customize_wp_callback_section_login() {
 	echo '<p>These settings enable you to customize the WP Login screen.</p>';
