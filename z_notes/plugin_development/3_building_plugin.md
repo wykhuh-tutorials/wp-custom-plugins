@@ -17,6 +17,8 @@ sub-level menu
 
 ==
 
+sub-level menu
+
 parent slugs for add_submenu_page()
 
 - slug determines which menu to add the submenu to
@@ -47,3 +49,32 @@ allowed html fields
 
 text input, radio, checkbox, textarea, select menu
 
+==
+register settings
+
+register_setting() - register settings
+
+admin_init() is only applied in the admin arrea
+
+```
+function custom_wp_register_settings() {
+
+	/*
+
+	register_setting(
+		string   $option_group, // same as "settings_fields( 'xxx' )
+		string   $option_name, // field name in database
+		callable $sanitize_callback
+	);
+
+	*/
+
+	register_setting(
+		'customize_wp_options',
+		'customize_wp_options',
+		'custom_wp_callback_validate_options'
+	);
+
+}
+add_action( 'admin_init', 'custom_wp_register_settings' );
+```

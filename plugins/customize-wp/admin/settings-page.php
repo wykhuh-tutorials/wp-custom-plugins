@@ -24,6 +24,7 @@ function customize_wp_display_settings_page() {
 			settings_fields( 'customize_wp_options' );
 
 			// output setting sections
+			// should be same as "add_submenu_page -> menu_slug"
 			do_settings_sections( 'customize_wp' );
 
 			// submit button
