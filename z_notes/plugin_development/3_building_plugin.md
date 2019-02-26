@@ -122,3 +122,12 @@ Loco Translate - WP plugin
 ==
 
 Loco Translate -> plugin -> select plugin -> create template
+
+==
+
+plugin cleanup
+
+remove options from database
+
+- register_uninstall_hook()
+- uninstall.php
