@@ -27,6 +27,9 @@ if ( is_admin())  {
 	require_once plugin_dir_path(__FILE__) . 'admin/settings-validate.php';
 }
 
+// include dependencies for admin and public
+require_once plugin_dir_path(__FILE__) . 'includes/core-functions.php';
+
 // default plugin options
 function customize_wp_options_default() {
 
