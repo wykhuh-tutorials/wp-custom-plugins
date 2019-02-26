@@ -7,12 +7,12 @@
 
 // callback: login section
 function customize_wp_callback_section_login() {
-	echo '<p>These settings enable you to customize the WP Login screen.</p>';
+	echo '<p>'.esc_html__('These settings enable you to customize the WP Login screen.', 'customize_wp').'</p>';
 }
 
 // callback: admin section
 function customize_wp_callback_section_admin() {
-	echo '<p>These settings enable you to customize the WP Admin Area.</p>';
+	echo '<p>'.esc_html__('These settings enable you to customize the WP Admin Area.', 'customize_wp').'</p>';
 }
 
 // callback: text field
@@ -40,8 +40,8 @@ function customize_wp_callback_field_radio( $args ) {
 
 	$radio_options = array(
 
-		'enable'  => 'Enable custom styles',
-		'disable' => 'Disable custom styles'
+		'enable'  => esc_html__('Enable custom styles', 'customize_wp'),
+		'disable' => esc_html__('Disable custom styles', 'customize_wp')
 
 	);
 
@@ -95,14 +95,14 @@ function customize_wp_callback_field_select( $args ) {
 
 	$select_options = array(
 
-		'default'   => 'Default',
-		'light'     => 'Light',
-		'blue'      => 'Blue',
-		'coffee'    => 'Coffee',
-		'ectoplasm' => 'Ectoplasm',
-		'midnight'  => 'Midnight',
-		'ocean'     => 'Ocean',
-		'sunrise'   => 'Sunrise',
+		'default'   => esc_html__('Default',   'customize_wp'),
+		'light'     => esc_html__('Light',     'customize_wp'),
+		'blue'      => esc_html__('Blue',      'customize_wp'),
+		'coffee'    => esc_html__('Coffee',    'customize_wp'),
+		'ectoplasm' => esc_html__('Ectoplasm', 'customize_wp'),
+		'midnight'  => esc_html__('Midnight',  'customize_wp'),
+		'ocean'     => esc_html__('Ocean',     'customize_wp'),
+		'sunrise'   => esc_html__('Sunrise',   'customize_wp'),
 
 	);
 

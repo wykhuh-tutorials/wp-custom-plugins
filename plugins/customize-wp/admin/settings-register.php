@@ -38,14 +38,14 @@ function custom_wp_register_settings() {
 
 	add_settings_section(
 		'customize_wp_section_login',
-		'Customize Login Page',
+		esc_html__('Customize Login Page', 'myplugin'),
 		'customize_wp_callback_section_login',
 		'customize_wp'
 	);
 
 	add_settings_section(
 		'customize_wp_section_admin',
-		'Customize Admin Area',
+		esc_html__('Customize Admin Area', 'myplugin'),
 		'customize_wp_callback_section_admin',
 		'customize_wp'
 	);
@@ -66,7 +66,7 @@ function custom_wp_register_settings() {
 
 	add_settings_field(
 		'custom_url',
-		'Custom URL',
+		esc_html__('Custom URL', 'myplugin'),
 		'customize_wp_callback_field_text',
 		'customize_wp',
 		'customize_wp_section_login',
@@ -75,7 +75,7 @@ function custom_wp_register_settings() {
 
 	add_settings_field(
 		'custom_title',
-		'Custom Title',
+		esc_html__('Custom Title', 'myplugin'),
 		'customize_wp_callback_field_text',
 		'customize_wp',
 		'customize_wp_section_login',
@@ -84,7 +84,7 @@ function custom_wp_register_settings() {
 
 	add_settings_field(
 		'custom_style',
-		'Custom Style',
+		esc_html__('Custom Style', 'myplugin'),
 		'customize_wp_callback_field_radio',
 		'customize_wp',
 		'customize_wp_section_login',
@@ -93,7 +93,7 @@ function custom_wp_register_settings() {
 
 	add_settings_field(
 		'custom_message',
-		'Custom Message',
+		esc_html__('Custom Message', 'myplugin'),
 		'customize_wp_callback_field_textarea',
 		'customize_wp',
 		'customize_wp_section_login',
@@ -102,7 +102,7 @@ function custom_wp_register_settings() {
 
 	add_settings_field(
 		'custom_footer',
-		'Custom Footer',
+		esc_html__('Custom Footer', 'myplugin'),
 		'customize_wp_callback_field_text',
 		'customize_wp',
 		'customize_wp_section_admin',
@@ -111,7 +111,7 @@ function custom_wp_register_settings() {
 
 	add_settings_field(
 		'custom_toolbar',
-		'Custom Toolbar',
+		esc_html__('Custom Toolbar', 'myplugin'),
 		'customize_wp_callback_field_checkbox',
 		'customize_wp',
 		'customize_wp_section_admin',
@@ -120,7 +120,7 @@ function custom_wp_register_settings() {
 
 	add_settings_field(
 		'custom_scheme',
-		'Custom Scheme',
+		esc_html__('Custom Scheme', 'myplugin'),
 		'customize_wp_callback_field_select',
 		'customize_wp',
 		'customize_wp_section_admin',

@@ -7,9 +7,17 @@
  * Author:      Jane Doe
  * License:     GPL2
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: customize-wp
+ * Text Domain: customize_wp
  * Domain Path: /languages
  */
+
+
+// load text domain
+function customize_wp_load_textdomain() {
+	// first param must match "Text Domain"
+	load_plugin_textdomain( 'customize_wp', false, plugin_dir_path( __FILE__ ) . 'languages/' );
+}
+add_action( 'plugins_loaded', 'customize_wp_load_textdomain' );
 
  // exit if file is called directly
 if ( ! defined( 'ABSPATH' ) ) {
@@ -35,10 +43,10 @@ function customize_wp_options_default() {
 
 	return array(
 		'custom_url'     => 'https://wordpress.org/',
-		'custom_title'   => 'Powered by WordPress',
+		'custom_title'   => esc_html__('Powered by WordPress', 'customize_wp'),
 		'custom_style'   => 'disable',
-		'custom_message' => '<p class="custom-message">My custom message</p>',
-		'custom_footer'  => 'Special message for users',
+		'custom_message' => '<p class="custom-message">'.__('My custom message', 'customize_wp').'</p>',
+		'custom_footer'  => __('Special message for users', 'customize_wp'),
 		'custom_toolbar' => false,
 		'custom_scheme'  => 'default',
 	);

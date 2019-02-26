@@ -78,3 +78,47 @@ function custom_wp_register_settings() {
 }
 add_action( 'admin_init', 'custom_wp_register_settings' );
 ```
+==
+
+
+i18n
+
+1) add "languages" folder
+2) add a file the same as the plugin
+3) Have "Text Domain" and "Domain Path" in the plugin settings setup and readme.txt
+- text domain must match the name of the plugin directory
+- domain path points to language folder
+
+
+~~
+
+add localization function
+
+1) include load_plugin_textdomain()
+2) replace all text strings with localization function
+
+==
+
+__(): return string
+_e(): echo string
+_x(): specify context with params
+
+safe i10n
+- santize the localized string
+- prevent translators from inserting malicious code via translation files
+
+esc_html__()
+esc_html__e()
+esc_html__x()
+
+==
+
+create POT files
+
+Poedit - app
+
+Loco Translate - WP plugin
+
+==
+
+Loco Translate -> plugin -> select plugin -> create template

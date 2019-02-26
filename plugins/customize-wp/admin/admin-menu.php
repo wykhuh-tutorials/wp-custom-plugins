@@ -24,8 +24,8 @@ function customize_wp_add_sublevel_menu() {
 
 	add_submenu_page(
 		'options-general.php',
-		'Customize WP Settings',
-		'Customize WP',
+		esc_html__('Customize WP Settings', 'customize_wp'),
+		esc_html__('Customize WP', 'customize_wp'),
 		'manage_options',
 		'customize_wp',
 		'customize_wp_display_settings_page'
