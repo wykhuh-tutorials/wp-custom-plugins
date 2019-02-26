@@ -53,8 +53,8 @@ function customize_wp_custom_login_styles() {
 		wp_enqueue_style(
 			string           $handle,
 			string           $src = '',
-			array            $deps = array(),
-			string|bool|null $ver = false,
+			array            $deps = array(): list of stylesheets that must beforehand,
+			string|bool|null $ver = false: appended version to stylesheet link,
 			string           $media = 'all'
 		)
 
@@ -63,10 +63,13 @@ function customize_wp_custom_login_styles() {
 			string           $src = '',
 			array            $deps = array(),
 			string|bool|null $ver = false,
-			bool             $in_footer = false
+      bool             $in_footer = false: true - put script at footer;
+                       false  - put script in head
 		)
 
-		*/
+    */
+
+    // these stylesheet and script will only load on the login page
 
 		wp_enqueue_style( 'customize_wp', plugin_dir_url( dirname( __FILE__ ) ) . 'public/css/customize-wp-login.css', array(), null, 'screen' );
 
