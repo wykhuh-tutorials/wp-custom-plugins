@@ -131,3 +131,10 @@ remove options from database
 
 - register_uninstall_hook()
 - uninstall.php
+
+
+uninstall.php is the preferred method
+- delete_option(): delete options from database
+- delete_site_option(): delete multisite options
+- delete_transient(): delete transients from database
+- delete_metadata(): delete metadata from database

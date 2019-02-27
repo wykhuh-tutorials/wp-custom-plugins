@@ -52,13 +52,3 @@ function customize_wp_options_default() {
 	);
 
 }
-
-
-// remove options on uninstall
-function customize_wp_on_uninstall() {
-	if ( ! current_user_can( 'activate_plugins' ) ) return;
-
-	delete_option( 'customize_wp_options' );
-
-}
-register_uninstall_hook( __FILE__, 'customize_wp_on_uninstall' );
